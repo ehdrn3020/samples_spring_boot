@@ -1,0 +1,6 @@
+rootProject.name = 'samples_spring_boot'
+
+include(
+    "kafka_samples:sample-01",
+    "kafka_samples:sample-02"
+)
