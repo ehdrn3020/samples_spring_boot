@@ -1,0 +1,23 @@
+spring:
+  kafka:
+    bootstrap-servers: 123.123.123.123:9092
+
+    consumer:
+      group-id: foo-consumer-group
+      enable-auto-commit: false # ack-mode 기준으로 커밋
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      max-poll-records: 100
+
+    listener:
+      ack-mode: record
+      concurrency: 1
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+
+logging:
+  level:
+    org.springframework.kafka: INFO

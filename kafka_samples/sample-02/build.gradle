@@ -4,7 +4,7 @@ plugins {
     id "java"
 }
 
-group = "com.example.sample01"
+group = "com.example.sample02"
 version = "0.0.1"
 
 repositories {
@@ -14,13 +14,4 @@ repositories {
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.kafka:spring-kafka"
-
-    // test
-    testImplementation "org.springframework.boot:spring-boot-starter-test"
-    testImplementation "org.springframework.kafka:spring-kafka-test"
-}
-
-
-tasks.named("test") {
-    useJUnitPlatform()
 }
