@@ -14,6 +14,7 @@ import org.springframework.kafka.listener.DeadLetterPublishingRecoverer;
 import org.springframework.kafka.listener.DefaultErrorHandler;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.util.backoff.FixedBackOff;
+import org.apache.kafka.common.TopicPartition;
 
 /**
  * 운영 환경 기준 Kafka Consumer 애플리케이션.
@@ -40,8 +41,11 @@ public class Application {
     @Bean
     public CommonErrorHandler errorHandler(KafkaOperations<Object, Object> template) {
         return new DefaultErrorHandler(
-                new DeadLetterPublishingRecoverer(template),
-                new FixedBackOff(1_000L, 2)
+            new DeadLetterPublishingRecoverer(
+                template,
+                (record, ex) -> new TopicPartition("topic1-dlt", record.partition())
+            ),
+            new FixedBackOff(1_000L, 2) // new FixedBackOff(0L, 0) 바로 전송
         );
     }
 
