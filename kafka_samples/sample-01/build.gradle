@@ -14,10 +14,8 @@ repositories {
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.kafka:spring-kafka"
-
-    // test
-    testImplementation "org.springframework.boot:spring-boot-starter-test"
-    testImplementation "org.springframework.kafka:spring-kafka-test"
+    // JsonMessageConverter 필요
+    implementation "org.springframework.boot:spring-boot-starter-json"
 }
 
 
