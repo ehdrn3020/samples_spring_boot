@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/psersons")
+@RequestMapping("/persons")
 public class PersonController {
     private final PersonRepository repo;
 

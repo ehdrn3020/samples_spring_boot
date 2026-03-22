@@ -11,7 +11,19 @@
 
 ## API
 ```declarative
+// GET /persons
+curl http://localhost:8080/persons
 
+// POST /persons ( window powershell에서 )
+Invoke-RestMethod -Method POST `
+-Uri "http://localhost:8080/persons" `
+-ContentType "application/json" `
+-Body '{"name":"John"}'
+
+// POST /persons/with-list
+curl -X POST http://localhost:8080/persons/with-list \
+-H "Content-Type: application/json" \
+-d "{\"name\":\"John\"}"
 ```
 
 ## DB 확인
