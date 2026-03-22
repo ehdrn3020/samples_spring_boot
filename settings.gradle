@@ -5,5 +5,5 @@ include(
         "kafka_samples:sample-02",
         "jpa_samples:crud-01"
 )
-include 'jpa_samples:iii'
 include 'jpa_samples:crud-01'
+include 'jpa_samples:crud-02'
