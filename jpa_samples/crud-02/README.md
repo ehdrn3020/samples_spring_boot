@@ -30,3 +30,45 @@ curl -X POST http://localhost:8080/persons/with-list \
 ```declarative
 http://localhost:8080/h2-console/ 접속
 ```
+
+## 프로세스
+```declarative
+[사용자 / 브라우저 / API 호출]
+            |
+            v
+   HTTP Request (/persons ...)
+            |
+            v
++------------------------+
+|   PersonController     |
+| - 요청 받음            |
+| - DTO 사용             |
+| - Repository 호출      |
++------------------------+
+            |
+            v
++------------------------+
+|   PersonRepository     |
+| - DB 접근 담당         |
+| - Person 엔티티 저장   |
+| - Person 조회          |
++------------------------+
+            |
+            v
++------------------------+
+|       Person           |
+| - Entity               |
+| - DB 테이블과 매핑     |
++------------------------+
+            |
+            v
+        [Database]
+
+애플리케이션 시작점
++------------------------+
+|      Application       |
+| - Spring Boot 시작     |
+| - 컴포넌트 스캔        |
+| - Controller/Repo 등록 |
++------------------------+
+```
