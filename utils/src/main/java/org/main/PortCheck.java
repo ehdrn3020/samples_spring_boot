@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /* PID 점유해서 다른 서버에서 방화벽 접속 확인 */
+/* javac PortCheck.java -> java PortCheck 로 실행 */
 public class PortCheck {
     public static void main(String[] args) {
         int port = 8083;
