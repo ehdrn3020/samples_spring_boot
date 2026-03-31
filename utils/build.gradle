@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.main'
+version = 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}

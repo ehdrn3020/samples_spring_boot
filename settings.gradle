@@ -6,3 +6,4 @@ include(
         "jpa_samples:crud-01",
         'jpa_samples:crud-02'
 )
+include 'utils'
