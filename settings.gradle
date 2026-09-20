@@ -7,3 +7,5 @@ include(
         'jpa_samples:crud-02'
 )
 include 'utils'
+include 'design_patterns'
+include 'design_patterns:abstract_factory'
