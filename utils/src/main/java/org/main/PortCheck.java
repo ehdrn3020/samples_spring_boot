@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/* PID 점유해서 다른 서버에서 방화벽 접속 확인 */
+/* 포트가 실제로 열려서 외부 접속을 받을 수 있는지 확인하는 단순 테스트 */
 /* javac PortCheck.java -> java PortCheck 로 실행 */
 public class PortCheck {
     public static void main(String[] args) {
