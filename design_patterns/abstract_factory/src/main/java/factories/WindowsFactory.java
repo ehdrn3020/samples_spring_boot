@@ -4,12 +4,12 @@ import checkboxes.Checkbox;
 
 public class WindowsFactory implements GUIFactory {
     @Override
-    public buttons.Button createButton() {
+    public Button createButton() {
         return new buttons.WindowsButton();
     }
 
     @Override
-    public checkboxes.Checkbox createCheckbox() {
+    public Checkbox createCheckbox() {
         return new checkboxes.WindowsCheckbox();
     }
 }
