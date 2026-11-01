@@ -1,12 +1,24 @@
 rootProject.name = 'samples_spring_boot'
 
+// 공통 유틸
+include 'utils'
+
+// Kafka 예제
 include(
-        "kafka_samples:sample-01",
-        "kafka_samples:sample-02",
-        "jpa_samples:crud-01",
+        'kafka_samples:sample-01',
+        'kafka_samples:sample-02'
+)
+
+// JPA 예제
+include(
+        'jpa_samples:crud-01',
         'jpa_samples:crud-02'
 )
-include 'utils'
-include 'design_patterns'
-include 'design_patterns:abstract_factory'
-include 'design_patterns:adapter'
+
+// 디자인 패턴 예제
+include(
+        'design_patterns:abstract_factory',
+        'design_patterns:adapter',
+        'design_patterns:builder',
+        'design_patterns:untitled'
+)
